@@ -1,7 +1,7 @@
 const pkg = require('./package');
 
 const router = process.env.DEPLOY_ENV === 'GH_PAGES'
-    ? { base: '//suibinc.github.io/suibinc/' }
+    ? { base: '/' }
     : {};
 
 module.exports = {
