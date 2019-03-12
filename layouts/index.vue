@@ -15,7 +15,7 @@
     };
 </script>
 
-<style>
+<style lang="less">
     html {
         font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
         Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -26,6 +26,13 @@
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
         box-sizing: border-box;
+        a {
+            outline: none;
+            &:hover {
+                color: #2196FF;
+                text-decoration: none;
+            }
+        }
     }
 
     *,
