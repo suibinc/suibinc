@@ -5,6 +5,9 @@
         <div class="tags-wrap" v-if="article.tags">
             <span class="tags" v-for="(item, index) in article.tags" v-text="item" :key="index"></span>
         </div>
+        <div class="info-wrap">
+            <span class="article-date" v-text="article.date"></span>
+        </div>
     </div>
 </template>
 
@@ -18,6 +21,7 @@
 
 <style lang="less">
     .article-list {
+        margin-bottom: 20px;
         h2 {
             font-size: 20px;
             color: #333;
@@ -36,6 +40,14 @@
                 border-radius: 12px;
                 padding: 4px 12px;
                 font-size: 12px;
+                color: #7f828b;
+                margin-right: 6px;
+            }
+        }
+        .info-wrap {
+            font-size: 12px;
+            padding-top: 6px;
+            .article-date {
                 color: #7f828b;
             }
         }
