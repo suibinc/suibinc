@@ -32,7 +32,9 @@ module.exports = {
     /*
     ** Global CSS
     */
-    css: [],
+    css: [
+        'styles/route.css'
+    ],
 
     /*
     ** Plugins to load before mounting the App

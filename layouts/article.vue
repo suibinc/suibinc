@@ -1,16 +1,38 @@
 <template>
     <div class="__layout_article__">
-        <sui-header/>
+        <article-header :config="config"/>
         <nuxt/>
     </div>
 </template>
 
 <script>
-    import SuiHeader from '~/components/article/Header.vue';
+    import ArticleHeader from '~/components/article/Header.vue';
 
     export default {
         components: {
-            SuiHeader
+            ArticleHeader
+        },
+        data() {
+            return {
+                config: {
+                    title: ''
+                }
+            };
+        },
+        beforeCreate() {
+            this.$root.$on('init', config => {
+                this.config = config;
+                console.log('layout', config);
+            });
+        },
+        beforeDestroy() {
+            this.$root.$off('init');
+        },
+        methods: {
+            fetchArticleDetails(data = {}) {
+                console.log(this.$route);
+                console.log(data);
+            }
         }
     };
 </script>

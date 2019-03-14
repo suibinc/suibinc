@@ -1,6 +1,6 @@
 <template>
     <div class="article-list">
-        <article-item v-for="(item, index) in article.list" :key="index" :article="item"/>
+        <article-item v-for="(item, index) in list" :key="index" :article="item" :dataset-index="index"/>
     </div>
 </template>
 
@@ -10,6 +10,9 @@
     export default {
         components: {
             ArticleItem
+        },
+        props: {
+            list: Array
         },
         computed: {
             article() {
