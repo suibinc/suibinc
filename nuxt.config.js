@@ -5,7 +5,7 @@ const router = process.env.DEPLOY_ENV === 'GH_PAGES'
     : {};
 
 module.exports = {
-    mode: 'universal',
+    mode: 'spa',
 
     router: router,
 
